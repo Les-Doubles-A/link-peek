@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Link Peek – aperçu flottant",
+  "version": "1.5.0",
+  "description": "Ouvre les liens dans une fenêtre flottante déplaçable et redimensionnable, sans nouvel onglet.",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "bookmarks",
+    "favicon",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Link Peek",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "overlay.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

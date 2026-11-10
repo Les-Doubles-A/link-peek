@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Speed Dial</title>
+<style>
+  :root { --bg:#f6f7f9; --fg:#202124; --card:#fff; --bd:#0001; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1c1d20; --fg:#e8eaed; --card:#2a2b2f; --bd:#fff1; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+  header { display:flex; align-items:center; gap:12px; margin-bottom:28px; }
+  h1 { font-size: 20px; margin:0; flex:1; }
+  select { font:inherit; padding:6px 10px; border-radius:8px; border:1px solid var(--bd); background:var(--card); color:var(--fg); }
+  #grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap:16px; }
+  .tile { display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 12px;
+          background:var(--card); border:1px solid var(--bd); border-radius:14px; text-decoration:none; color:inherit;
+          transition: transform .12s, box-shadow .12s; }
+  .tile:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+  .ico { width:48px; height:48px; border-radius:10px; object-fit:contain; }
+  .letter { width:48px; height:48px; border-radius:10px; background:#6c7ae0; color:#fff; font-size:22px;
+            display:flex; align-items:center; justify-content:center; }
+  .name { font-size:13px; text-align:center; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .empty { opacity:.7; padding:40px 0; text-align:center; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Speed Dial</h1>
+    <label>Dossier : <select id="folder"></select></label>
+  </header>
+  <div id="grid"></div>
+</main>
+<script src="overlay.js"></script>
+<script src="newtab.js"></script>
+</body>
+</html>

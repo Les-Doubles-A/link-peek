@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, sans-serif; width: 260px; margin: 0; padding: 14px; }
+  #site { font-weight: 600; word-break: break-all; margin-bottom: 4px; }
+  #etat { font-size: 13px; opacity: .75; margin-bottom: 12px; }
+  #bascule { width: 100%; font: inherit; font-weight: 600; padding: 10px; border: 0; border-radius: 8px; cursor: pointer; color: #fff; background: #2563eb; }
+  #bascule.retirer { background: #dc2626; }
+  #bascule:disabled { opacity: .4; cursor: default; }
+  a { display: block; margin-top: 12px; font-size: 13px; text-align: center; color: inherit; opacity: .75; }
+</style>
+</head>
+<body>
+  <div id="site">…</div>
+  <div id="etat"></div>
+  <button id="bascule" disabled>…</button>
+  <a href="#" id="reglages">Réglages</a>
+  <script src="popup.js"></script>
+</body>
+</html>

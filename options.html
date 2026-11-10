@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Link Peek – Réglages</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 560px; margin: 40px auto; padding: 0 16px; line-height: 1.5; }
+  label.opt { display: block; padding: 10px 12px; border: 1px solid #8884; border-radius: 8px; margin: 8px 0; cursor: pointer; }
+  small { display: block; opacity: .7; }
+  #ok { color: #1a7f37; height: 1.2em; }
+  code { display:block; padding:10px; background:#8882; border-radius:8px; word-break:break-all; margin:8px 0; user-select:all; }
+  button { font:inherit; padding:6px 12px; }
+  hr { margin: 28px 0; border: 0; border-top: 1px solid #8884; }
+</style>
+</head>
+<body>
+  <h1>Link Peek</h1>
+  <p>Quand ouvrir un lien en fenêtre flottante ?</p>
+  <label class="opt"><input type="radio" name="mode" value="alt"> <b>Alt + clic</b> (recommandé)<small>Les clics normaux ne changent pas.</small></label>
+  <label class="opt"><input type="radio" name="mode" value="all"> <b>Chaque clic gauche</b><small>Ctrl/Cmd/Maj + clic gardent leur comportement habituel.</small></label>
+  <label class="opt"><input type="radio" name="mode" value="off"> <b>Désactivé</b></label>
+  <div id="ok"></div>
+
+  <hr>
+  <h2>Sites autorisés</h2>
+  <p>Link Peek ne fonctionne <b>que</b> sur ces sites (sous-domaines inclus). Un domaine par ligne, par exemple <code style="display:inline;padding:2px 6px">wikipedia.org</code>. Le plus simple : clique sur l'icône de l'extension depuis le site voulu.</p>
+  <textarea id="sites" rows="8" style="width:100%;box-sizing:border-box;font:inherit;font-family:monospace"></textarea>
+  <p><button id="enregistrer">Enregistrer</button></p>
+  <div id="ok2" style="color:#1a7f37;height:1.2em"></div>
+
+  <hr>
+  <h2>Speed Dial Vivaldi</h2>
+  <p>Vivaldi interdit aux extensions de modifier sa page de démarrage native (<code style="display:inline;padding:2px 6px">vivaldi://startpage</code>). L'extension fournit donc <b>sa propre page Speed Dial</b>, qui lit tes favoris et ouvre chaque tuile en fenêtre flottante.</p>
+  <p>Pour l'utiliser comme page de nouvel onglet, copie cette adresse :</p>
+  <code id="url"></code>
+  <button id="copy">Copier l'adresse</button>
+  <p>Puis dans Vivaldi : <i>Paramètres → Onglets → Page de nouvel onglet</i> (ou <i>Démarrage</i>), choisis <b>Page spécifique</b> et colle l'adresse.</p>
+  <p><a id="open" href="#">Ouvrir le Speed Dial maintenant</a></p>
+
+  <script src="options.js"></script>
+</body>
+</html>
