@@ -7,7 +7,7 @@ Extension navigateur qui ouvre les liens dans une fenêtre flottante déplaçabl
 <!-- installeur-release -->
 ## Installation
 
-Téléchargez **`link-peek-Setup-1.5.0.exe`** depuis la [dernière release](https://github.com/Les-Doubles-A/link-peek/releases/latest), puis lancez-le.
+Téléchargez **`link-peek-Setup-1.5.1.exe`** depuis la [dernière release](https://github.com/Les-Doubles-A/link-peek/releases/latest), puis lancez-le.
 
 L'installeur copie l'extension dans `%LOCALAPPDATA%\Programs\link-peek\extension` puis affiche la marche à suivre :
 

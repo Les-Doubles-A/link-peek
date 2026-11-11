@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Link Peek – aperçu flottant",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Ouvre les liens dans une fenêtre flottante déplaçable et redimensionnable, sans nouvel onglet.",
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
   "permissions": [
     "storage",
     "declarativeNetRequest",
@@ -18,7 +19,8 @@
   },
   "action": {
     "default_title": "Link Peek",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png" }
   },
   "content_scripts": [
     {
